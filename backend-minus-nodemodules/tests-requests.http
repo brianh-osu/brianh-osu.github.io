@@ -1,0 +1,38 @@
+### CREATE test documents.
+POST http://localhost:3000/log HTTP/1.1
+//path define dby app.post() route handler (/log)
+content-type: application/json
+
+{
+    "name": "hoppy",
+    "rating": 3,
+    "date": "2023-09-01"
+}
+
+### RETRIEVE all documents.
+GET http://localhost:3000/log HTTP/1.1
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/log/6414c011d60c800f84a4d399 HTTP/1.1
+
+
+### UPDATE one document's year, by ID.
+### Replace the id in the following request with one that exists
+### and update the title, year, and/or language:
+PUT http://localhost:3000/log/641404773460c46d48f7a904 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "mackle donalds",
+    "rating": 1,
+    "date": "2023-05-20"
+}
+
+### DELETE by ID (no response provided)
+DELETE http://localhost:3000/log/64150bd927bb89d94172107a HTTP/1.1
+
+
+### DELETEs ALL documents!
+DELETE http://localhost:3000/log/ HTTP/1.1
+//not needed for portfolio project 
