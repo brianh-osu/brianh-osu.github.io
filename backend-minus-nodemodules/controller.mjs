@@ -5,7 +5,7 @@ import express from 'express';
 import * as restaurantlog from './model.mjs'; 
 
 //3. Define the PORT using .env, 4. Define the app to call express()
-const PORT = process.env.port ; 
+const PORT = process.env.PORT ; 
 const app = express()
 
 //4. Define the app to call express()
